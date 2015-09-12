@@ -1,0 +1,12 @@
+[Unit]
+Description=Ganglia Alert Daemon
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/opt/ganglia-alert/ganglia-alert.py -d 
+ExecStop=/opt/ganglia-alert/ganglia-alert.py -k
+
+[Install]
+WantedBy=multi-user.target
+
